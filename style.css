@@ -1,0 +1,18 @@
+h1 {
+  text-align: center;
+}
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+section.container {
+  box-sizing: border-box;
+  margin: 10px;
+  min-width: 310px;
+}
