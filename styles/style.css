@@ -1,0 +1,49 @@
+html {
+  font-family: monospace, Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 62.5%;
+  background-color: #eee;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+main {
+  font-size: 1.6rem;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2.4rem;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-list .card {
+  flex: 1 0 290px;
+  margin: 15px;
+  text-align: center;
+}
+@media(max-width: 480px) {
+  .card-list .card {
+    flex: 1 0 250px;
+  }
+}
+.card-list .card.alive {
+  background-color: rgba(94, 189, 94, 0.3);
+}
+.card-list .card.dead {
+  background-color: #bababa;
+}
+.card-list .card img {
+  max-width: 300px;
+  max-height: 300px;
+  object-fit: cover;
+}
