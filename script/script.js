@@ -11,9 +11,7 @@ class Character {
         this.name = name;
         this.type = type;
         this.status = status;
-
     }
-
     generateHTML() {
         const containerCard = document.createElement('div');
         containerCard.classList.add('card')
@@ -41,7 +39,6 @@ class Character {
         return containerCard;
     }
 }
-
 
 const fetchCharacters = async () => {
 
