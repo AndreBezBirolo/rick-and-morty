@@ -1,5 +1,5 @@
 class Character {
-    constructor(imageURL, name, type, status) {
+    constructor({ imageURL, name, type, status }) {
         this.imageURL = imageURL;
         this.name = name;
         this.type = type;
@@ -9,10 +9,14 @@ class Character {
         const containerCard = document.createElement('div');
         containerCard.classList.add('card')
         containerCard.classList.add('container')
-        if (this.status === 'Alive') {
-            containerCard.classList.add('alive')
-        } else if (this.status === 'Dead') {
-            containerCard.classList.add('dead')
+        switch (this.status) {
+            case 'Alive':
+                containerCard.classList.add('alive')
+                break
+            default:
+            case 'Dead':
+                containerCard.classList.add('dead')
+                break
         }
         const imageCard = document.createElement('img');
         imageCard.alt = this.name;

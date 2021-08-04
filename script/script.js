@@ -8,7 +8,7 @@ const fetchCharacters = async (qnt= 5) => {
         const rickResponse = await fetch(API_URL + characterID, {headers: {API_HEADER}})
         let {image, name, type, status} = await rickResponse.json();
         if (type === '') type = 'not specified';
-        const characterCard = new Character(image, name, type, status).generateHTML();
+        const characterCard = new Character({'imageURL': image, name, type, status}).generateHTML();
         charactersSection.appendChild(characterCard)
     }
     await hideLoading();
